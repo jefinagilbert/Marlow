@@ -66,7 +66,7 @@ const AddLists = ({navigationMethod, data}) => {
     const onClickSave = async () => {
         let resp = data;
         let idd  = 0;
-        resp.lists = input;
+        resp.lists = input.filter(obj => obj.value !== "");
         let lists = await getLists('perlists');
         if(exists) {
             const { id, ...newObj } = data;

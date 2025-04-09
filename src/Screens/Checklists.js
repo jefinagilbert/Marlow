@@ -96,7 +96,7 @@ const Checklists = ({navigationMethod}) => {
                                     <View>
                                         <Text style={styles.textFour}>{item.title}</Text>
                                         <Text style={styles.textFive}>Date created: {item.timestamp}</Text>
-                                        <Text style={styles.textFive}>Last item added: {item.lists[0].value}</Text>
+                                        <Text style={styles.textFive}>Last item added: {item.lists[item.lists.length-1].value}</Text>
                                     </View>
                                     <Pressable onPress={() => navigationMethod("savedlists", index)}>
                                         <MaterialIcons name="arrow-forward-ios" size={15} color="#c9c7c7" />
